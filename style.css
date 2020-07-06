@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    position: absolute;
+    top: 10%;
+    left: calc(50% - 60px);
+    line-height: 50px;
+    width: 120px;
+    padding: 5px;
+    color: ghostwhite;
+    background-color: pink;
+    font-family: Arial;
+    font-size: 16px;
+    border: 3px dotted deeppink;
+    transition: .3s;
+}
+
+.square {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: purple;
+    transition: left .5s, top 0.5s .5s, width .3s .6s, height .3s .6s;
+    ;
+}
+
+button:hover {
+    background-color: black;
+    color: pink;
+}
+
+button:hover+.square {
+    width: 150px;
+    height: 150px;
+    top: calc(100% - 150px);
+    /*10px BUTTON WIDTH*/
+    left: calc(100% - 150px);
+}
